@@ -3,26 +3,26 @@ var orm = require("../config/orm.js");
 
 var burger = {
     all: function(cb) {
-        orm.all("cats", function(res) {
+        orm.selectAll("burgers", function(res) {
             cb(res);
         });
     },
 
-    create: function(col, vals, cb) {
-        orm.create("cats", cols, vals, function(res){
+    insert: function(col, vals, cb) {
+        orm.insertOne("burgers", cols, vals, function(res){
             cb(res);
         });
     },
     update: function(objColVals, condition, cb) {
-        orm.update("cats", objColVals, condition, function(res) {
+        orm.updateOne("burgers", objColVals, condition, function(res) {
             cb(res);
         });
     },
-    delete: function(condition, cb) {
-        orm.delete("cats", condition, function(res) {
-            cb(res);
-        });
-    }
+    // delete: function(condition, cb) {
+    //     orm.delete("cats", condition, function(res) {
+    //         cb(res);
+    //     });
+    // }
 };
 
 module.exports = burger;
