@@ -1,15 +1,21 @@
 <h1>Burgers</h1>
 
 <div id="main" class="clearfix">
-    <h2 id="devouredHeader" class="">Devoured these burgers</h2>
 
-    <ul>
-        {{#each burger}} {{#if devour}} {{> burger/burger-block devoured=false}} {{/if}} {{/each}}
-    </ul>
+    <div id="devoured">
+        <h2 id="devouredHeader" class="">Devoured these burgers</h2>
+        <ul>
+            {{#each burger}} {{#if devour}} {{> burger/burger-block devoured=false}} {{/if}} {{/each}}
+        </ul>
+
+    </div>
 
     <div class="verticalLine"></div>
 
-    <h2 id="notDevouredHeader"> Haven't devoured ... yet </h2>
+    <div id="notDevoured">
+        <h2 id="notDevouredHeader"> Haven't devoured ... yet </h2>
+
+    </div>
 
 </div>
 <h2>Add a Burger</h2>
