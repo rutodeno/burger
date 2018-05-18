@@ -5,7 +5,12 @@
     <div id="devoured">
         <h2 id="devouredHeader" class="">Devoured these burgers</h2>
         <ul>
-            {{#each burger}} {{#if devour}} {{> burger/burger-block devoured=false}} {{/if}} {{/each}}
+            {{#each burger}} 
+                {{#if devour}} 
+                    {{> burger-devoured devoured=false}} 
+                {{/if}}     
+            {{/each}}
+
         </ul>
 
     </div>
@@ -15,10 +20,19 @@
     <div id="notDevoured">
         <h2 id="notDevouredHeader"> Haven't devoured ... yet </h2>
 
+        <ul>
+            {{#each burger}} 
+                {{#unless devour}} 
+                    {{> burger-devoured devoured=true}}
+                {{/unless}}
+            {{/each }}
+            
+        </ul>
+
     </div>
 
 </div>
-<h2>Add a Burger</h2>
+<h3>Add a Burger</h3>
 <form class="create-form">
     <div class="form-group">
         <label for="eat">Burger Name: </label>

@@ -9,7 +9,7 @@ function printQuestionMarks(num) {
         array.push("?"); // expected output ?,? 
     }
 
-    return console.log(array.toString());
+    return array.toString();
 }
 
 function objToSql(ob) { // convert object to array
@@ -27,7 +27,7 @@ function objToSql(ob) { // convert object to array
         }
     }
 
-    return console.log(array.toString());
+    return array.toString();
 }
 
 // printQuestionMarks(2);
@@ -37,6 +37,7 @@ function objToSql(ob) { // convert object to array
 var orm = {
     selectAll: function(tableInput, cb) {
         var queryString = "SELECT * FROM " + tableInput + ";";
+
         connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;

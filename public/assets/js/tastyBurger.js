@@ -13,6 +13,8 @@ $(function() {
         }).then(
             function() {
                 console.log("Changed burger to ", newState)
+                location.reload();
+
             }
         )
     })
@@ -23,13 +25,14 @@ $(function() {
         var newBurger = {
             name : $("#eat").val().trim(),
         }
+        console.log("new Burger" + newBurger.name);
+
 
         $.ajax("/api/burger", {
             type: "POST",
             data: newBurger
         }).then(
             function() {
-                console.log("Created burger");
                 location.reload();
             }
         )
