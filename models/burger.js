@@ -1,4 +1,7 @@
 
+
+
+// setting up model to interact with database
 var orm = require("../config/orm.js");
 
 var burger = {

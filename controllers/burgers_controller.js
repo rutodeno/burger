@@ -4,7 +4,11 @@ var router = express.Router();
 
 var burger = require("../models/burger.js")
 
-router.get("/", function (res, res) {
+router.get("/", function(req,res){
+    res.redirect("/burgers");
+})
+
+router.get("/burgers", function (res, res) {
     burger.all(function (data) {
         var hbsObj = {
             burgers: data
@@ -25,7 +29,8 @@ router.post("/api/burger", function (req, res) {
             req.body.name
         ], function (result) {
             console.log("req.body.burger_name " + req.body.name)
-            res.json({ id: result.insertId });
+            //res.json({ id: result.insertId });
+            res.redirect("/burgers");
         })
 })
 
@@ -40,7 +45,8 @@ router.put("/api/burger/:id", function (req, res) {
         if (result.changedRows == 0) {
             return res.status(404).end();
         } else {
-            res.status(200).end();
+            //res.status(200).end();
+            res.redirect("/burgers")
         }
     });
 });
