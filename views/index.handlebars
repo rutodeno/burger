@@ -6,8 +6,9 @@
         <h2 id="devouredHeader" class="">Devoured these burgers</h2>
         <ul>
             {{#each burgers}} 
-                {{#if devour}} 
-                    {{> burger-devoured devoured=false}} 
+                {{#if this.devoured}} 
+                    <!-- {{> burger-devoured devour = true}}  -->
+                    <li>{{ burger_name }} </li>
                 {{/if}}               
             {{/each}}
 
@@ -22,8 +23,10 @@
 
         <ul>
             {{#each burgers}} 
-               {{#unless devour}} 
-                    {{> burger-devoured devoured=true}}
+               {{#unless this.devoured}} 
+
+                 {{> burger-devoured devour = true}}  
+                     
                 {{/unless}}            
             {{/each }}
             

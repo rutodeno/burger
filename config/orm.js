@@ -1,5 +1,6 @@
-// mysql
-var connection = require("../config/connection.js");
+// O.R.M to map to database
+
+var connection = require("../config/connection.js"); // calling connection to mysql
 
 
 function printQuestionMarks(num) {
@@ -81,7 +82,7 @@ var orm = {
                 throw err;
             }
 
-            cb(results);
+            cb(result);
         });
     },
 

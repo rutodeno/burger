@@ -1,7 +1,9 @@
 <li>
-    {{this.burger_name}}
 
-    <button class="change-state" data-id="{{id}}" data-newstate="{{this.devoured}}">
-        {{#if devour}} Devour {{/if}}
-    </button>
+        {{this.burger_name}}
+
+
+        <button type="submit" class="change-state" data-id="{{id}}" data-newstate="{{devour}}">
+            {{#if devour }} Devour {{/if}}
+        </button>
 </li>

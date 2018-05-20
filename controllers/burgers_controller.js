@@ -6,7 +6,7 @@ var burger = require("../models/burger.js")
 
 router.get("/", function(req,res){
     res.redirect("/burgers");
-})
+});
 
 router.get("/burgers", function (res, res) {
     burger.all(function (data) {
@@ -40,7 +40,7 @@ router.put("/api/burger/:id", function (req, res) {
     console.log("Condition", condition);
 
     burger.update({
-        devour: req.body.devour
+        devoured: req.body.devoured
     }, condition, function (result) {
         if (result.changedRows == 0) {
             return res.status(404).end();

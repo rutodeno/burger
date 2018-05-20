@@ -4,10 +4,10 @@ $(function() {
         var newState = $(this).data("newstate");
 
         var burgerState = {
-            devour : newState
+            devoured : newState
         }
 
-        $.ajax("/api/burger"+id,  {
+        $.ajax("/api/burger/"+id,  {
             type: "PUT",
             data: burgerState
         }).then(
