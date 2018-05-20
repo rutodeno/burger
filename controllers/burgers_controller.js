@@ -42,11 +42,12 @@ router.put("/api/burger/:id", function (req, res) {
     burger.update({
         devoured: req.body.devoured
     }, condition, function (result) {
-        if (result.changedRows == 0) {
+        if (result.affectedRows == 0) {
             return res.status(404).end();
         } else {
-            //res.status(200).end();
-            res.redirect("/burgers")
+            res.status(200).end();
+           // res.redirect("/burgers") It was giving me an error for some reason
+           
         }
     });
 });

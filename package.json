@@ -23,5 +23,16 @@
     "express-handlebars": "^3.0.0",
     "mysql": "^2.15.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "keywords": [
+    "An",
+    "app",
+    "that",
+    "creates",
+    "the",
+    "Burger",
+    "of",
+    "your",
+    "dreams"
+  ]
 }

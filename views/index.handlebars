@@ -4,7 +4,7 @@
 
     <div id="devoured">
         <h2 id="devouredHeader" class="">Devoured these burgers</h2>
-        <ul>
+        <ol>
             {{#each burgers}} 
                 {{#if this.devoured}} 
                     <!-- {{> burger-devoured devour = true}}  -->
@@ -12,7 +12,7 @@
                 {{/if}}               
             {{/each}}
 
-        </ul>
+        </ol>
 
     </div>
 
@@ -21,7 +21,7 @@
     <div id="notDevoured">
         <h2 id="notDevouredHeader"> Haven't devoured ... yet </h2>
 
-        <ul>
+        <ol>
             {{#each burgers}} 
                {{#unless this.devoured}} 
 
@@ -30,7 +30,7 @@
                 {{/unless}}            
             {{/each }}
             
-        </ul>
+        </ol>
 
     </div>
 

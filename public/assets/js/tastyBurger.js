@@ -12,8 +12,8 @@ $(function() {
             data: burgerState
         }).then(
             function() {
-                console.log("Changed burger to ", newState)
                 location.reload();
+                console.log("Changed burger to ", burgerState.devoured)
 
             }
         )
